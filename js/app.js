@@ -20,14 +20,18 @@
 
 /**
  * Define Global Variables
- * 
-*/
+ */
 
+/** @type {HTMLElement} The unordered list element that will contain the navigation links. */
+const navList = document.getElementById('navbar__list');
+
+/** @type {NodeList} A collection of all section elements on the page. */
+const sections = document.querySelectorAll('section');
 
 /**
  * End Global Variables
  * Start Helper Functions
- * 
+ *
 */
 
 
@@ -35,7 +39,7 @@
 /**
  * End Helper Functions
  * Begin Main Functions
- * 
+ *
 */
 
 // build the nav
@@ -50,10 +54,10 @@
 /**
  * End Main Functions
  * Begin Events
- * 
+ *
 */
 
-// Build menu 
+// Build menu
 
 // Scroll to section on link click
 
