@@ -31,10 +31,16 @@ const sections = document.querySelectorAll('section');
 /**
  * End Global Variables
  * Start Helper Functions
- *
 */
 
-
+/**
+ * @description Creates a new list item element for the navigation menu.
+ * @returns {HTMLLIElement} The newly created list item element.
+ */
+function createListItem() {
+    const listItem = document.createElement("li"); // Create a new <li> element
+    return listItem; // Return the created list item
+}
 
 /**
  * End Helper Functions
