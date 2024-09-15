@@ -57,6 +57,21 @@ function createSectionLink(section) {
 }
 
 /**
+ * @description Iterates over sections and adds corresponding navigation links.
+ * @uses createListItem
+ * @uses createSectionLink
+ */
+function addListItemsToNav() {
+    // Iterate through each section element on the page
+    for (const section of sections) {
+        const listItem = createListItem();     // Create list item
+        const link = createSectionLink(section); // Create link for section
+        listItem.appendChild(link);            // Add link to list item
+        navList.appendChild(listItem);         // Add list item to nav
+    }
+}
+
+/**
  * End Helper Functions
  * Begin Main Functions
  *
