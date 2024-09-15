@@ -56,6 +56,20 @@ const createSectionLink = (section) => {
     return link;
 }
 
+/**
+ * @description Debounces a function to limit the rate at which it can fire.
+ * @param {Function} func - The function to debounce.
+ * @param {number} wait - The number of milliseconds to wait before allowing the function to be called again.
+ * @returns {Function} The debounced function.
+ */
+const debounce = (func, wait) => {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 
 /**
  * End Helper Functions
