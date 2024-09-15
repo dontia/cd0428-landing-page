@@ -138,7 +138,7 @@ const scrollToSection = (event) => {
 /**
  * @description Adds click event listeners to all navigation links to trigger smooth scrolling.
  */
-function addClickEventListeners() {
+const addClickEventListeners = () => {
     // Select all elements with the class 'menu__link'
     const navLinks = document.querySelectorAll(".menu__link");
 
