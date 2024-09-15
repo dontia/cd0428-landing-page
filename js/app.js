@@ -132,7 +132,11 @@ const scrollToSection = (event) => {
     const targetSectionId = event.target.getAttribute("href"); // Get the target section's ID from the link's href
     const targetSection = document.querySelector(targetSectionId); // Find the target section element
 
-    targetSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the target section with smooth behavior
+    if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the target section with smooth behavior
+    } else {
+        console.error(`Target section not found: ${targetSectionId}`);
+    }
 }
 
 /**
