@@ -162,5 +162,5 @@ addListItemsToNav();
 addClickEventListeners();
 
 // Set sections as active
-document.addEventListener('scroll', highlightActiveSection);
+document.addEventListener('scroll', debounce(highlightActiveSection, 100));
 
