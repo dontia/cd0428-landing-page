@@ -134,25 +134,20 @@ function addClickEventListeners() {
  * Begin Main Functions
  */
 
-// build the nav
-addListItemsToNav();
 
-// Add class 'active' to section when near top of viewport
-document.addEventListener('scroll', highlightActiveSection);
 
-// Scroll to anchor ID using scrollTO event
-addClickEventListeners();
 
 /**
  * End Main Functions
  * Begin Events
- *
 */
 
 // Build menu
+addListItemsToNav();
 
 // Scroll to section on link click
+addClickEventListeners();
 
 // Set sections as active
-
+document.addEventListener('scroll', highlightActiveSection);
 
