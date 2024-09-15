@@ -104,6 +104,18 @@ function highlightActiveSection(event) {
 }
 
 /**
+ * @description Scrolls smoothly to the target section when a navigation link is clicked.
+ * @param {Event} event - The click event object.
+ */
+function scrollToSection(event) {
+    event.preventDefault(); // Prevent the default link behavior (jumping to the section)
+    const targetSectionId = event.target.getAttribute("href"); // Get the target section's ID from the link's href
+    const targetSection = document.querySelector(targetSectionId); // Find the target section element
+
+    targetSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the target section with smooth behavior
+}
+
+/**
  * End Helper Functions
  * Begin Main Functions
  *
