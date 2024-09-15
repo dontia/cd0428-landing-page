@@ -56,6 +56,12 @@ function createSectionLink(section) {
     return link;
 }
 
+
+/**
+ * End Helper Functions
+ * Begin Main Functions
+ */
+
 /**
  * @description Iterates over sections and adds corresponding navigation links.
  * @uses createListItem
@@ -128,13 +134,6 @@ function addClickEventListeners() {
         link.addEventListener("click", scrollToSection);
     }
 }
-
-/**
- * End Helper Functions
- * Begin Main Functions
- */
-
-
 
 
 /**
