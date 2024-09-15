@@ -72,6 +72,38 @@ function addListItemsToNav() {
 }
 
 /**
+ * @description Highlights the currently active section and its navigation link.
+ * @param {Event} event - The scroll event (for potential future enhancements).
+ */
+function highlightActiveSection(event) {
+    for (const section of sections) {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+
+        // Check if section is in viewport
+        const isInViewport = sectionTop <= 150 && sectionBottom >= 150;
+
+        if (isInViewport) {
+            section.classList.add("section--active");
+
+            // Find and highlight corresponding nav link
+            const navItem = navList.querySelector(`a[href="#${section.id}"]`);
+            if (navItem) {
+                navItem.classList.add("active-link");
+            }
+        } else {
+            section.classList.remove("section--active");
+
+            // Find and un-highlight corresponding nav link
+            const navItem = navList.querySelector(`a[href="#${section.id}"]`);
+            if (navItem) {
+                navItem.classList.remove("active-link");
+            }
+        }
+    }
+}
+
+/**
  * End Helper Functions
  * Begin Main Functions
  *
