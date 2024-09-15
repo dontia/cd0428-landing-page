@@ -95,7 +95,7 @@ const addListItemsToNav = () => {
  * @description Highlights the currently active section and its navigation link.
  * @param {Event} event - The scroll event (for potential future enhancements).
  */
-function highlightActiveSection(event) {
+const highlightActiveSection = (event) => {
     for (const section of sections) {
         const sectionTop = section.getBoundingClientRect().top;
         const sectionBottom = section.getBoundingClientRect().bottom;
