@@ -43,6 +43,20 @@ function createListItem() {
 }
 
 /**
+ * @description Creates a navigation link for a given section.
+ * @param {HTMLElement} section - The section to link to.
+ * @returns {HTMLAnchorElement} The created link.
+ */
+function createSectionLink(section) {
+    const link = document.createElement("a");
+    link.href = `#${section.id}`;          // Link to the section
+    link.textContent = section.dataset.nav; // Set link text
+    link.classList.add("menu__link");       // Add styling class
+
+    return link;
+}
+
+/**
  * End Helper Functions
  * Begin Main Functions
  *
