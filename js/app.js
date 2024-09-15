@@ -81,7 +81,7 @@ const debounce = (func, wait) => {
  * @uses createListItem
  * @uses createSectionLink
  */
-function addListItemsToNav() {
+const addListItemsToNav = () => {
     // Iterate through each section element on the page
     for (const section of sections) {
         const listItem = createListItem();     // Create list item
