@@ -47,7 +47,7 @@ const createListItem = () => {
  * @param {HTMLElement} section - The section to link to.
  * @returns {HTMLAnchorElement} The created link.
  */
-function createSectionLink(section) {
+const createSectionLink = (section) => {
     const link = document.createElement("a");
     link.href = `#${section.id}`;          // Link to the section
     link.textContent = section.dataset.nav; // Set link text
