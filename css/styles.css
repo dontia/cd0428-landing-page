@@ -67,7 +67,7 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: center;
 }
 
 .navbar__menu li {
@@ -216,5 +216,30 @@ section.section--active .landing__container::after {
 
     to {
         transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    }
+}
+
+
+/* Additional Media Queries for Responsiveness */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+        margin: 1em 0.5rem;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .landing__container {
+        padding: 1em;
+    }
+
+    .navbar__menu .menu__link {
+        padding: 0.5em;
+    }
+
+    .page__footer {
+        padding: 1.5em;
     }
 }
