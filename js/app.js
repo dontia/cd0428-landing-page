@@ -109,7 +109,7 @@ const highlightActiveSection = (event) => {
             // Find and highlight corresponding nav link
             const navItem = navList.querySelector(`a[href="#${section.id}"]`);
             if (navItem) {
-                navItem.classList.add("active-link");
+                navItem.classList.add("active");
             }
         } else {
             section.classList.remove("section--active");
@@ -117,7 +117,7 @@ const highlightActiveSection = (event) => {
             // Find and un-highlight corresponding nav link
             const navItem = navList.querySelector(`a[href="#${section.id}"]`);
             if (navItem) {
-                navItem.classList.remove("active-link");
+                navItem.classList.remove("active");
             }
         }
     }
@@ -140,7 +140,7 @@ const scrollToSection = (event) => {
 }
 
 /**
- * @description Adds click event listeners to all navigation links to trigger smooth scrolling.
+ * @description Adds click event listeners to all navigation links to trigger smooth scrolling
  */
 const addClickEventListeners = () => {
     // Select all elements with the class 'menu__link'
@@ -151,6 +151,20 @@ const addClickEventListeners = () => {
         // Add a 'click' event listener to each link
         link.addEventListener("click", scrollToSection);
     }
+}
+
+/**
+ * @description Adds click event listeners to handle the active class for navigation links
+ */
+const addActiveClassEventListeners = () => {
+    document.querySelectorAll('.navbar__menu .menu__link').forEach(link => {
+        link.addEventListener('click', function () {
+            document.querySelectorAll('.navbar__menu .menu__link').forEach(item => {
+                item.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
 }
 
 
